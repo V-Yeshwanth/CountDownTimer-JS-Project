@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(210, 36%, 96%);
+}
+
+h1{
+    color: hsl(205, 72%, 37%);
+    text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 33px;
+    font-weight: bolder;
+    letter-spacing: 0.25rem;
+}
+h3{
+    margin-top: -30px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 26px;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+}
+p{
+    color: hsl(210, 22%, 49%);
+    font-size: 17px;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+/* Section */
+section{
+    /* background-color: red; */
+    margin: auto;
+    width: 90%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.left-container{
+    position: relative;
+    /* background-color: coral; */
+}
+.right-container{
+    width: 100%;
+    height: 400px;
+    /* height: 100vh; */
+    margin: auto 0;
+    /* background-color: cyan; */
+}
+.image-container{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#image{
+    width: 85%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width:900px) {
+    section{
+        margin-top: 200px;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .left-container{
+        padding-top: 40px;
+    }
+    .right-container{
+        width: 90%;
+        /* background-color: coral; */
+        margin-top: 150px;
+        padding-left: 50px;
+        padding-bottom: 100px;
+    }
+    .countdown-container{
+        margin-top: 40px;
+    }
+}
+
+/* ***CountDown ***** */
+.countdown-container{
+    /* background-color: red; */
+    display: flex;
+}
+.countTimer > h1{
+    margin-top: 0;
+    color: #fff;
+}
+.countTimer > h4{
+    margin-bottom: 0;
+    margin-top: -20px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.countTimer{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 72px;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background-color: black;
+    margin: 10px 15px;
+}
+.expire{
+    margin-left: 20px;
+    font-size: 40px;
+    animation: bouncing infinite 3s ease-in;
+}
+
+@keyframes  bouncing{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        color: rgb(228, 95, 95);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
